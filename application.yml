@@ -5,8 +5,8 @@ spring:
 ---
 spring:
   profiles: dev
-    application:
-      name: pltservicecloud-config-plt-dev
+  application:
+    name: pltservicecloud-config-plt-dev
 ---
 spring:
   profiles: test
