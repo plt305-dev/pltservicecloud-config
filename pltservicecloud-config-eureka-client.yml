@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active:
+    -  dev
+---
+server:
+  port: 7001
+spring:
+  profiles: dev
+  application:
+    name: pltservicecloud-config-eureka-client
+eureka:
+  instance:
+    hostname: peek1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://peek1:7001/eureka/
+---
+server:
+  port: 7001
+
+spring:
+  profiles: test
+  application:
+    name: pltservicecloud-config-eureka-client
+
+eureka:
+  instance:
+    hostname: peek1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://peek1:7001/eureka/
